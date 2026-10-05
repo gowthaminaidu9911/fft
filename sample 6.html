@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #17345c;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            animation: start 1s;
+        }
+
+        nav {
+            background-color: #102d4f;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        nav a:hover {
+            color: lightblue;
+        }
+
+        .main {
+            width: 90%;
+            margin: 30px auto;
+        }
+
+        .about {
+            background-color: white;
+            padding: 25px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .project {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+        }
+
+        .project h3 {
+            color: #17345c;
+        }
+
+        .skills {
+            background-color: white;
+            padding: 25px;
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .skill {
+            display: inline-block;
+            background-color: #17345c;
+            color: white;
+            padding: 10px 20px;
+            margin: 8px;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            background-color: #4da3ff;
+        }
+
+        .contact {
+            background-color: white;
+            padding: 25px;
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        input, textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 8px;
+        }
+
+        button {
+            background-color: #17345c;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #4da3ff;
+        }
+
+        footer {
+            background-color: #17345c;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        @keyframes start {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Portfolio</h1>
+        <p>Welcome to my personal portfolio website</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="main">
+
+        <div class="about" id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! My name is Ravi. I am a student interested in
+                web development and technology. I enjoy creating simple
+                and useful websites using HTML and CSS.
+            </p>
+        </div>
+
+        <h2 style="text-align:center;">My Projects</h2>
+
+        <div class="projects" id="projects">
+
+            <div class="project">
+                <h3>Semantic dep Website</h3>
+                <p>
+                    A simple Semantic dep website.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>College Tech Fest</h3>
+                <p>
+                    A webpage created to display college tech fest
+                    information and events.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Student Management</h3>
+                <p>
+                    A basic project for managing student information.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="skills" id="skills">
+
+            <h2>My Skills</h2>
+
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Python</div>
+            <div class="skill">SQL</div>
+
+        </div>
+
+        <div class="contact" id="contact">
+
+            <h2>Contact Me</h2>
+
+            <form>
+                <input type="text" placeholder="Enter your name">
+                <br>
+
+                <input type="email" placeholder="Enter your email">
+                <br>
+
+                <textarea rows="5" placeholder="Enter your message"></textarea>
+                <br>
+
+                <button type="submit">Submit</button>
+            </form>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 My Portfolio</p>
+    </footer>
+
+</body>
+</html>

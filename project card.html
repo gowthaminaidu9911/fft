@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Navrag Utsav 2026 </title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box; font-family: 'Segoe UI', sans-serif;}
+body{background:#f5f7ff; color:#222;}
+nav{
+  display:flex; justify-content:space-between; align-items:center;
+  padding:15px 5%; background:whitesmoke; color:red; position:sticky; top:0; z-index:100;
+}
+nav .logo{font-size:22px; font-weight:700; color:#ffcc00;}
+nav ul{display:flex; list-style:none; gap:20px;}
+nav ul li a{color:white; text-decoration:none; font-weight:500;}
+nav ul li a:hover{color:#ffcc00f1;}
+.menu-icon{display:none; font-size:26px; cursor:pointer;}
+
+/* BANNER */
+.banner{
+  background: linear-gradient(135deg, yellow, red 50%, #ff6a3d 100%);
+  color:white; text-align:center; padding:80px 20px;
+}
+.banner h1{font-size:48px; margin-bottom:10px;}
+.banner p{font-size:18px; margin:15px 0;}
+.banner button{
+  padding:12px 28px; border:none; border-radius:30px;
+  background:#ffcc00; color: orangered; font-weight:700; font-size:16px; cursor:pointer;
+}
+.banner button:hover{background:white;}
+
+/* SECTIONS COMMON */
+.section{padding:50px 5%;}
+.title{font-size:28px; margin-bottom:20px; color:#ff6a3d; border-left:5px solid #ff6a3d; padding-left:12px;}
+
+.details-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:20px;}
+.detail-box{background:white; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.08);}
+
+/* SCHEDULE TABLE */
+table{width:100%; border-collapse:collapse; background:white; border-radius:12px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,0.08);}
+th{background:; color:white; padding:14px;}
+td{padding:14px; text-align:center; border-bottom:1px solid #eee;}
+tr:hover{background:#fff4e6;}
+
+/* SPEAKER CARDS */
+.speakers{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:20px;}
+.card{background:white; border-radius:15px; padding:20px; text-align:center; box-shadow:0 5px 15px rgba(0,0,0,0.08); transition:0.3s;}
+.card:hover{transform:translateY(-8px);}
+.card img{width:90px; height:90px; border-radius:50%; background:#ddd;}
+.card h3{margin-top:12px; color:#4b2dd0;}
+.card p{color:#666; font-size:14px;}
+
+/* FORM */
+.form-box{background:white; padding:25px; border-radius:15px; max-width:600px; box-shadow:0 5px 15px rgba(0,0,0,0.08);}
+.form-box input, .form-box select{width:100%; padding:12px; margin:10px 0; border-radius:8px; border:1px solid #ccc;}
+.form-box button{width:100%; padding:12px; background:orangered; color:white; border:none; border-radius:8px; font-size:16px; cursor:pointer;}
+.form-box button:hover{background:red;}
+
+.contact{background:orchid; color:white; text-align:center;}
+.contact p{margin:8px 0; color:#ccc;}
+
+@media(max-width:768px){
+  nav ul{display:none; flex-direction:column; position:absolute; top:60px; left:0; width:100%; background:#1a1a40; padding:20px;}
+  nav ul.active{display:flex;}
+  .menu-icon{display:block;}
+  .banner h1{font-size:32px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Navrag Utsav 2026</div>
+  <div class="menu-icon" onclick="document.querySelector('nav ul').classList.toggle('active')">☰</div>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#details">Details</a></li>
+    <li><a href="#schedule">Schedule</a></li>
+    <li><a href="#speakers">Speakers</a></li>
+    <li><a href="#register">Register</a></li>
+  </ul>
+</nav>
+
+<div class="banner">
+  <h1>Navrag Utsav</h1>
+  <p>Inaugration & Aarti| Dandiya damaka| DJ Garba  - 19th & 20th Oct 2026</p>
+  <p>Venue: Main Auditorium </p>
+  <button>Register Now</button>
+</div>
+
+<div class="section" id="details">
+  <h2 class="title">Event Details</h2>
+  <div class="details-grid">
+    <div class="detail-box"><h3>📅 Date</h3><p>19-20th Oct 2026</p></div>
+    <div class="detail-box"><h3>📍 Venue</h3><p>College Auditorium & Ground</p></div>
+    <div class="detail-box"><h3>⏰ Time</h3><p>4: 30 PM - 9:00 PM</p></div>
+    <div class="detail-box"><h3>🎯 Theme</h3><p> celebration of Dusheera</p></div>
+  </div>
+</div>
+
+<div class="section" id="schedule">
+  <h2 class="title">Event Schedule</h2>
+  <table>
+    <tr><th>Time</th><th>Event</th><th>Location</th></tr>
+    <tr><td>4: 30 PM</td><td>Inaugration & Aarti</td><td>Main Hall</td></tr>
+    <tr><td>5:30 PM</td><td>Best Dressed Award</td><td>Auditorium</td></tr>
+    <tr><td>7:00 PM</td><td>Dandiya Damaka</td><td>Ground</td></tr>
+    <tr><td>8:00 PM</td><td>DJ garba Night</td><td>Ground</td></tr>
+  </table>
+</div>
+<div class="section" id="register">
+  <h2 class="title">Registration Form</h2>
+  <div class="form-box">
+    <input type="text" placeholder="Full Name">
+    <input type="email" placeholder="College Email">
+    <select><option>Select Department</option><option>BCA</option><option>B,SC</option><option>BBA</option></select>
+    <select><option>Select Event</option><option>DJ Garba</option><option>Inaugration Aarti</option><option>Dandiya Dhamaka</option></select>
+    <button type="submit">Submit Registration</button>
+  </div>
+</div>
+
+<div class="section contact">
+  <h2>Contact Us</h2>
+  <p>Email: event fest@college.edu </p>
+  <p>Follow us on Instagram @Dandiyanights</p>
+</div>
+
+</body>
+</html>
