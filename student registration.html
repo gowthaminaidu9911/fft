@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<title>Student Registration</title>
+<style>
+body {
+font-family: Arial;
+margin: 30px;
+}
+form {
+width: 450px;
+margin: auto;
+}
+input, select, textarea {
+width: 100%;
+padding: 10px;
+margin: 6px 0 15px;
+box-sizing: border-box;
+}
+button {
+padding: 10px 20px;
+}
+</style>
+</head>
+<body>
+<h1 align="center">Student Registration Form</h1>
+<form>
+<label>Student Name:</label>
+<input type="text" required>
+<label>Email:</label>
+<input type="email" required>
+<label>Password:</label>
+<input type="password" required minlength="6">
+<label>Gender:</label><br>
+<input type="radio" name="gender" value="Male">
+Male
+<input type="radio" name="gender" value="Female">
+Female
+<br><br>
+<label>Course:</label>
+<select>
+<option>MCA</option>
+<option>BCA</option>
+<option>M.Tech</option>
+</select>
+<label>Skills:</label>
+<input type="checkbox"> HTML
+<input type="checkbox"> CSS
+<input type="checkbox"> JavaScript
+<br><br>
+<label>Address:</label>
+<textarea rows="4"></textarea>
+<button type="submit">Register</button>
+</form>
+</body>
+</html>
